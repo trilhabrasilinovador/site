@@ -59,6 +59,22 @@
         .container {
             max-width: 1200px;
         }
+
+        /* Estilo para os botões de material/gravação */
+        .material-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .material-button:hover {
+            background-color: #f9fafb;
+        }
     </style>
 </head>
 
@@ -74,11 +90,12 @@
                 </div>
                 <nav class="hidden md:flex items-center gap-6">
                     <a href="#inicio" class="text-gray-600 hover:text-primary transition-colors font-medium">Início</a>
-                    <a href="#cronograma-detalhado"
+                    <a href="#cronograma-geral"
                         class="text-gray-600 hover:text-primary transition-colors font-medium">Cronograma</a>
+                    <a href="#trilha-gestores"
+                        class="text-gray-600 hover:text-primary transition-colors font-medium">Trilha</a>
                     <a href="#gestores"
                         class="text-gray-600 hover:text-primary transition-colors font-medium">Gestores</a>
-                    <a href="#trilha" class="text-gray-600 hover:text-primary transition-colors font-medium">Trilha</a>
                     <a href="#equipe" class="text-gray-600 hover:text-primary transition-colors font-medium">Equipe</a>
                 </nav>
                 <button class="md:hidden p-2 text-gray-800">
@@ -104,257 +121,16 @@
                     <span class="text-2xl md:text-3xl font-light text-secondary">Inova</span>
                 </div>
                 <h1 class="text-3xl md:text-5xl font-bold text-primary-foreground mb-4">TRILHA BRASIL INOVADOR</h1>
-                <p class="text-xl md:text-2xl font-light text-primary-foreground/90 mb-8">Capacitação de Equipes
-                    Gestoras e Projetos Pré-incubados</p>
-                <p class="text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">Metodologia de pré-incubação que
-                    visa capacitar equipes gestoras e selecionar projetos de estudantes e servidores em instituições da
-                    Rede Federal e Estaduais de Educação Profissional e Tecnológica.</p>
+                <!-- Texto em branco conforme solicitado -->
+                <p class="text-xl md:text-2xl font-light text-white mb-8">Capacitação de Equipes Gestoras e Projetos
+                    Pré-incubados</p>
+                <p class="text-white max-w-2xl mx-auto leading-relaxed">Metodologia de pré-incubação que visa capacitar
+                    equipes gestoras e selecionar projetos de estudantes e servidores em instituições da Rede Federal e
+                    Estaduais de Educação Profissional e Tecnológica.</p>
             </div>
         </section>
 
-        <!-- 2. Seção de Cronograma Detalhado (Data/Horário, Materiais, Gravações e Link) -->
-        <section id="cronograma-detalhado" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-center gap-3 mb-12">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-calendar text-secondary">
-                        <path d="M8 2v4"></path>
-                        <path d="M16 2v4"></path>
-                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-                        <path d="M3 10h18"></path>
-                    </svg>
-                    <h2 class="text-3xl font-bold text-gray-800">Cronograma de Encontros</h2>
-                </div>
-
-                <!-- Link Fixo da Reunião -->
-                <div class="bg-secondary/10 border-l-4 border-secondary p-4 mb-10 max-w-4xl mx-auto rounded-lg">
-                    <p class="font-semibold text-lg text-gray-800 mb-2">Link Fixo para Todas as Reuniões:</p>
-                    <a href="https://conferenciaweb.rnp.br/sala/assistec-inova2" target="_blank"
-                        class="text-primary hover:text-primary/80 break-all underline">
-                        https://conferenciaweb.rnp.br/sala/assistec-inova2
-                    </a>
-                </div>
-
-                <!-- Tabela de Cronograma Detalhado -->
-                <div class="overflow-x-auto">
-                    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-lg">
-                        <thead>
-                            <tr class="bg-primary text-primary-foreground text-left">
-                                <th class="py-3 px-4 font-semibold">Encontro</th>
-                                <th class="py-3 px-4 font-semibold">Data / Horário</th>
-                                <th class="py-3 px-4 font-semibold">Materiais</th>
-                                <th class="py-3 px-4 font-semibold">Gravação</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            <!-- Encontro 1 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="py-3 px-4 font-medium text-primary">Encontro 1: [Nome do Encontro]</td>
-                                <td class="py-3 px-4 text-sm text-gray-600">[Data e Horário]</td>
-                                <td class="py-3 px-4">
-                                    <a href="#" class="text-secondary hover:underline text-sm">Apresentação (PDF)</a>
-                                </td>
-                                <td class="py-3 px-4">
-                                    <a href="#" class="text-secondary hover:underline text-sm">Gravação (Link)</a>
-                                </td>
-                            </tr>
-                            <!-- Encontro 2 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="py-3 px-4 font-medium text-primary">Encontro 2: [Nome do Encontro]</td>
-                                <td class="py-3 px-4 text-sm text-gray-600">[Data e Horário]</td>
-                                <td class="py-3 px-4">
-                                    <span class="text-gray-400 text-sm">Em breve</span>
-                                </td>
-                                <td class="py-3 px-4">
-                                    <span class="text-gray-400 text-sm">Em breve</span>
-                                </td>
-                            </tr>
-                            <!-- Encontro 3 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="py-3 px-4 font-medium text-primary">Encontro 3: [Nome do Encontro]</td>
-                                <td class="py-3 px-4 text-sm text-gray-600">[Data e Horário]</td>
-                                <td class="py-3 px-4">
-                                    <span class="text-gray-400 text-sm">Em breve</span>
-                                </td>
-                                <td class="py-3 px-4">
-                                    <span class="text-gray-400 text-sm">Em breve</span>
-                                </td>
-                            </tr>
-                            <!-- Encontro 4 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="py-3 px-4 font-medium text-primary">Encontro 4: [Nome do Encontro]</td>
-                                <td class="py-3 px-4 text-sm text-gray-600">[Data e Horário]</td>
-                                <td class="py-3 px-4">
-                                    <span class="text-gray-400 text-sm">Em breve</span>
-                                </td>
-                                <td class="py-3 px-4">
-                                    <span class="text-gray-400 text-sm">Em breve</span>
-                                </td>
-                            </tr>
-                            <!-- Encontro 5 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="py-3 px-4 font-medium text-primary">Encontro 5: [Nome do Encontro]</td>
-                                <td class="py-3 px-4 text-sm text-gray-600">[Data e Horário]</td>
-                                <td class="py-3 px-4">
-                                    <span class="text-gray-400 text-sm">Em breve</span>
-                                </td>
-                                <td class="py-3 px-4">
-                                    <span class="text-gray-400 text-sm">Em breve</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Seção de Formação de Gestores (Conteúdo anterior) -->
-        <section id="gestores" class="py-16 bg-muted">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-center gap-3 mb-12">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-users text-secondary">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <h2 class="text-3xl font-bold text-gray-800">Formação de Gestores</h2>
-                </div>
-
-                <p class="text-center max-w-3xl mx-auto mb-10 text-lg text-gray-600">A capacitação é estruturada em 5
-                    encontros focados em fortalecer a gestão e o ecossistema de inovação nas 15 instituições parceiras.
-                </p>
-
-                <!-- Divisão das Instituições por Especialista -->
-                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Instituições Atendidas por Especialista
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Prof. Bruno Siqueira -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-t-primary">
-                        <h4 class="text-xl font-semibold text-primary mb-3">Prof. Bruno Siqueira (5 IEs)</h4>
-                        <ul class="list-disc list-inside space-y-1 text-gray-700">
-                            <li>[Nome da Instituição 1]</li>
-                            <li>[Nome da Instituição 2]</li>
-                            <li>[Nome da Instituição 3]</li>
-                            <li>[Nome da Instituição 4]</li>
-                            <li>[Nome da Instituição 5]</li>
-                        </ul>
-                    </div>
-                    <!-- Prof. Joelias -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-t-primary">
-                        <h4 class="text-xl font-semibold text-primary mb-3">Prof. Joelias (5 IEs)</h4>
-                        <ul class="list-disc list-inside space-y-1 text-gray-700">
-                            <li>[Nome da Instituição 6]</li>
-                            <li>[Nome da Instituição 7]</li>
-                            <li>[Nome da Instituição 8]</li>
-                            <li>[Nome da Instituição 9]</li>
-                            <li>[Nome da Instituição 10]</li>
-                        </ul>
-                    </div>
-                    <!-- Prof. Rodrigo -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-t-primary">
-                        <h4 class="text-xl font-semibold text-primary mb-3">Prof. Rodrigo (5 IEs)</h4>
-                        <ul class="list-disc list-inside space-y-1 text-gray-700">
-                            <li>[Nome da Instituição 11]</li>
-                            <li>[Nome da Instituição 12]</li>
-                            <li>[Nome da Instituição 13]</li>
-                            <li>[Nome da Instituição 14]</li>
-                            <li>[Nome da Instituição 15]</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Seção Trilha de Pré-Incubação (Conteúdo anterior) -->
-        <section id="trilha" class="py-16 bg-background">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-center gap-3 mb-12">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-trending-up text-secondary">
-                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                        <polyline points="16 7 22 7 22 13"></polyline>
-                    </svg>
-                    <h2 class="text-3xl font-bold text-gray-800">Trilha de Pré-Incubação</h2>
-                </div>
-
-                <p class="text-center max-w-3xl mx-auto mb-10 text-lg text-gray-600">A jornada dos projetos é dividida
-                    em 4 etapas cruciais, garantindo que as ideias se transformem em empreendimentos viáveis.</p>
-
-                <!-- Etapas da Trilha -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Etapa 1: Validação do Problema -->
-                    <div
-                        class="rounded-lg border bg-white text-gray-800 shadow-sm border-t-4 border-t-secondary hover:shadow-lg transition-shadow">
-                        <div class="p-6">
-                            <h3 class="font-semibold tracking-tight text-xl text-primary mb-2">1. Validação do Problema
-                            </h3>
-                            <p class="text-sm text-gray-500 mb-3">O ponto de partida para entender a dor do cliente e a
-                                relevância do projeto.</p>
-                            <ul class="space-y-1 text-sm text-gray-600">
-                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Pesquisa de
-                                    mercado e entrevistas.</li>
-                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Definição
-                                    clara do problema a ser resolvido.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Etapa 2: Modelos de Negócio -->
-                    <div
-                        class="rounded-lg border bg-white text-gray-800 shadow-sm border-t-4 border-t-secondary hover:shadow-lg transition-shadow">
-                        <div class="p-6">
-                            <h3 class="font-semibold tracking-tight text-xl text-primary mb-2">2. Modelos de Negócio
-                            </h3>
-                            <p class="text-sm text-gray-500 mb-3">Desenho de como o projeto irá criar, entregar e
-                                capturar valor.</p>
-                            <ul class="space-y-1 text-sm text-gray-600">
-                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Canvas do
-                                    Modelo de Negócio (BMC).</li>
-                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Estratégias
-                                    de monetização e concorrência.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Etapa 3: Prototipação -->
-                    <div
-                        class="rounded-lg border bg-white text-gray-800 shadow-sm border-t-4 border-t-secondary hover:shadow-lg transition-shadow">
-                        <div class="p-6">
-                            <h3 class="font-semibold tracking-tight text-xl text-primary mb-2">3. Prototipação</h3>
-                            <p class="text-sm text-gray-500 mb-3">Criação de uma versão inicial e simplificada do
-                                produto ou serviço (MVP).</p>
-                            <ul class="space-y-1 text-sm text-gray-600">
-                                <li class="flex items-start gap-2"><span
-                                        class="text-secondary mt-1">•</span>Desenvolvimento de protótipos.</li>
-                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Testes de
-                                    usabilidade e feedback.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Etapa 4: Pitch e Apresentação Final -->
-                    <div
-                        class="rounded-lg border bg-white text-gray-800 shadow-sm border-t-4 border-t-secondary hover:shadow-lg transition-shadow">
-                        <div class="p-6">
-                            <h3 class="font-semibold tracking-tight text-xl text-primary mb-2">4. Pitch e Final</h3>
-                            <p class="text-sm text-gray-500 mb-3">Comunicação da ideia de forma convincente e
-                                apresentação para a banca.</p>
-                            <ul class="space-y-1 text-sm text-gray-600">
-                                <li class="flex items-start gap-2"><span
-                                        class="text-secondary mt-1">•</span>Estruturação do roteiro do pitch.</li>
-                                <li class="flex items-start gap-2"><span
-                                        class="text-secondary mt-1">•</span>Apresentação final para a Banca Nacional.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Seção Cronograma Geral (Conteúdo anterior) -->
+        <!-- 2. Cronograma Geral do Programa (MOVIDO PARA O INÍCIO) -->
         <section id="cronograma-geral" class="py-16 bg-muted">
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-center gap-3 mb-12">
@@ -451,6 +227,251 @@
             </div>
         </section>
 
+        <!-- 3. Seção Trilha com Gestores (Antigo Cronograma Detalhado) -->
+        <section id="trilha-gestores" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-center gap-3 mb-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-calendar text-secondary">
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
+                    </svg>
+                    <h2 class="text-3xl font-bold text-gray-800">Trilha com Gestores</h2>
+                </div>
+
+                <!-- Link Fixo da Reunião -->
+                <div class="bg-secondary/10 border-l-4 border-secondary p-4 mb-10 max-w-4xl mx-auto rounded-lg">
+                    <p class="font-semibold text-lg text-gray-800 mb-2">Link Fixo para Todas as Reuniões:</p>
+                    <a href="https://conferenciaweb.rnp.br/sala/assistec-inova2" target="_blank"
+                        class="text-primary hover:text-primary/80 break-all underline">
+                        https://conferenciaweb.rnp.br/sala/assistec-inova2
+                    </a>
+                </div>
+
+                <!-- Tabela de Cronograma Detalhado -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-lg">
+                        <thead>
+                            <tr class="bg-primary text-primary-foreground text-left">
+                                <th class="py-3 px-4 font-semibold">Encontro</th>
+                                <th class="py-3 px-4 font-semibold">Data / Horário</th>
+                                <th class="py-3 px-4 font-semibold">Materiais</th>
+                                <th class="py-3 px-4 font-semibold">Gravação</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <!-- Encontro 1 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-3 px-4 font-medium text-primary">Encontro 1: Ambientação</td>
+                                <td class="py-3 px-4 text-sm text-gray-600">13/10/2025 - 17:30h às 19h</td>
+                                <td class="py-3 px-4">
+                                    <a href="https://docs.google.com/presentation/d/1QpWHcnY23WQPrpe6WDpFNkK7yrqOKRqj/edit?usp=sharing&ouid=100516911590605001944&rtpof=true&sd=true"
+                                        class="text-secondary hover:underline text-sm">Apresentação (.ppt)</a>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <a href="#" class="text-secondary hover:underline text-sm">Gravação (Link)</a>
+                                </td>
+                            </tr>
+                            <!-- Encontro 2 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-3 px-4 font-medium text-primary">Encontro 2: Ecossistema de Inovação</td>
+                                <td class="py-3 px-4 text-sm text-gray-600">27/10/2025 - 17:30h às 19h</td>
+                                <td class="py-3 px-4">
+                                    <span class="text-gray-400 text-sm">Em breve</span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="text-gray-400 text-sm">Em breve</span>
+                                </td>
+                            </tr>
+                            <!-- Encontro 3 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-3 px-4 font-medium text-primary">Encontro 3: [Nome do Encontro]</td>
+                                <td class="py-3 px-4 text-sm text-gray-600">[Data e Horário]</td>
+                                <td class="py-3 px-4">
+                                    <span class="text-gray-400 text-sm">Em breve</span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="text-gray-400 text-sm">Em breve</span>
+                                </td>
+                            </tr>
+                            <!-- Encontro 4 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-3 px-4 font-medium text-primary">Encontro 4: [Nome do Encontro]</td>
+                                <td class="py-3 px-4 text-sm text-gray-600">[Data e Horário]</td>
+                                <td class="py-3 px-4">
+                                    <span class="text-gray-400 text-sm">Em breve</span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="text-gray-400 text-sm">Em breve</span>
+                                </td>
+                            </tr>
+                            <!-- Encontro 5 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-3 px-4 font-medium text-primary">Encontro 5: [Nome do Encontro]</td>
+                                <td class="py-3 px-4 text-sm text-gray-600">[Data e Horário]</td>
+                                <td class="py-3 px-4">
+                                    <span class="text-gray-400 text-sm">Em breve</span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="text-gray-400 text-sm">Em breve</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Seção de Formação de Gestores (IEs Atualizadas) -->
+        <section id="gestores" class="py-16 bg-muted">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-center gap-3 mb-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-users text-secondary">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <h2 class="text-3xl font-bold text-gray-800">Formação de Gestores</h2>
+                </div>
+
+                <p class="text-center max-w-3xl mx-auto mb-10 text-lg text-gray-600">A capacitação é estruturada em
+                    encontros focados em fortalecer a gestão e o ecossistema de inovação nas 15 instituições parceiras.
+                </p>
+
+                <!-- Divisão das Instituições por Especialista -->
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Instituições Atendidas por Especialista
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Prof. Bruno Siqueira -->
+                    <div class="bg-white p-6 rounded-lg shadow-inner border-t-4 border-t-primary">
+                        <h4 class="text-xl font-semibold text-primary mb-3">Prof. Dr. Bruno Siqueira (5 IEs)</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li>IF Goiano</li>
+                            <li>IFTM</li>
+                            <li>IFCE</li>
+                            <li>IFAL</li>
+                            <li>IFMA</li>
+                        </ul>
+                    </div>
+
+                    <!-- Prof. Joelias -->
+                    <div class="bg-white p-6 rounded-lg shadow-inner border-t-4 border-t-primary">
+                        <h4 class="text-xl font-semibold text-primary mb-3">Prof. Dr. Joelias Silva Pinto Junior (5 IEs)
+                        </h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li>CETEC AM</li>
+                            <li>IFAM</li>
+                            <li>CETEC Santana/AP</li>
+                            <li>IFAC</li>
+                            <li>IFRO</li>
+                        </ul>
+                    </div>
+                    <!-- Prof. Rodrigo -->
+                    <div class="bg-white p-6 rounded-lg shadow-inner border-t-4 border-t-primary">
+                        <h4 class="text-xl font-semibold text-primary mb-3">Prof. Dr. Rodrigo Sales (5 IEs)</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li>IFsudeste</li>
+                            <li>Ifsuldeminas</li>
+                            <li>IFMG</li>
+                            <li>IFES</li>
+                            <li>IFTO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Seção Trilha de Pré-Incubação (Conteúdo anterior) -->
+        <section id="trilha" class="py-16 bg-background">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-center gap-3 mb-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-trending-up text-secondary">
+                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                        <polyline points="16 7 22 7 22 13"></polyline>
+                    </svg>
+                    <h2 class="text-3xl font-bold text-gray-800">Trilha de Pré-Incubação</h2>
+                </div>
+
+                <p class="text-center max-w-3xl mx-auto mb-10 text-lg text-gray-600">A jornada dos projetos é dividida
+                    em 4 etapas cruciais, garantindo que as ideias se transformem em empreendimentos viáveis.</p>
+
+                <!-- Etapas da Trilha -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Etapa 1: Validação do Problema -->
+                    <div
+                        class="rounded-lg border bg-white text-gray-800 shadow-sm border-t-4 border-t-secondary hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="font-semibold tracking-tight text-xl text-primary mb-2">1. Validação do Problema
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-3">O ponto de partida para entender a dor do cliente e a
+                                relevância do projeto.</p>
+                            <ul class="space-y-1 text-sm text-gray-600">
+                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Pesquisa de
+                                    mercado e entrevistas.</li>
+                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Definição
+                                    clara do problema a ser resolvido.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Etapa 2: Modelos de Negócio -->
+                    <div
+                        class="rounded-lg border bg-white text-gray-800 shadow-sm border-t-4 border-t-secondary hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="font-semibold tracking-tight text-xl text-primary mb-2">2. Modelos de Negócio
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-3">Desenho de como o projeto irá criar, entregar e
+                                capturar valor.</p>
+                            <ul class="space-y-1 text-sm text-gray-600">
+                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Canvas do
+                                    Modelo de Negócio (BMC).</li>
+                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Estratégias
+                                    de monetização e concorrência.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Etapa 3: Prototipação -->
+                    <div
+                        class="rounded-lg border bg-white text-gray-800 shadow-sm border-t-4 border-t-secondary hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="font-semibold tracking-tight text-xl text-primary mb-2">3. Prototipação</h3>
+                            <p class="text-sm text-gray-500 mb-3">Criação de uma versão inicial e simplificada do
+                                produto ou serviço (MVP).</p>
+                            <ul class="space-y-1 text-sm text-gray-600">
+                                <li class="flex items-start gap-2"><span
+                                        class="text-secondary mt-1">•</span>Desenvolvimento de protótipos.</li>
+                                <li class="flex items-start gap-2"><span class="text-secondary mt-1">•</span>Testes de
+                                    usabilidade e feedback.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Etapa 4: Pitch e Apresentação Final -->
+                    <div
+                        class="rounded-lg border bg-white text-gray-800 shadow-sm border-t-4 border-t-secondary hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="font-semibold tracking-tight text-xl text-primary mb-2">4. Pitch e Final</h3>
+                            <p class="text-sm text-gray-500 mb-3">Comunicação da ideia de forma convincente e
+                                apresentação para a banca.</p>
+                            <ul class="space-y-1 text-sm text-gray-600">
+                                <li class="flex items-start gap-2"><span
+                                        class="text-secondary mt-1">•</span>Estruturação do roteiro do pitch.</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="text-secondary mt-1">•</span>Apresentação final para a Banca Nacional.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 6. Seção Equipe/Especialistas (Conteúdo anterior) -->
         <section id="equipe" class="py-16 bg-background">
             <div class="container mx-auto px-4">
@@ -469,7 +490,7 @@
                     <h2 class="text-3xl font-bold text-gray-800">Nossos Especialistas</h2>
                 </div>
 
-                <p class="text-center max-w-3xl mx-auto mb-10 text-lg text-gray-600">Conheça os especialistas que guiam a
+                <p class="text-center max-w-3xl mx-auto mb-10 text-lg text-gray-600">Conheça os professores que guiam a
                     formação de gestores e apoiam a trilha de pré-incubação.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -479,9 +500,10 @@
                         <div
                             class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center text-gray-500 font-bold">
                             Foto</div>
-                        <h3 class="text-xl font-bold text-primary mb-1">Prof. Dr. Bruno Siqueira da Silva</h3>
-                        <p class="text-sm text-gray-600 mb-3">Doutor em Computação / IFFar</p>
-                        <p class="text-sm text-gray-500"><a href="mailto:bruno.siqueira@iffarroupilha.edu.br?subject=Trilha Brasil Inovador - Contato">Enviar e-mail</a></p>
+                        <h3 class="text-xl font-bold text-primary mb-1">Prof. Dr. Bruno Siqueira</h3>
+                        <p class="text-sm text-gray-600 mb-3">Instituto Federal Farroupilha</p>
+                        <p class="text-sm text-gray-500"><a href="mailto:bruno.siqueira@iffarroupilha.edu.br">Enviar
+                                e-mail</a></p>
                     </div>
                     <!-- Prof. Joelias -->
                     <div class="flex flex-col items-center text-center p-6 bg-muted rounded-lg shadow-md">
@@ -489,9 +511,9 @@
                         <div
                             class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center text-gray-500 font-bold">
                             Foto</div>
-                        <h3 class="text-xl font-bold text-primary mb-1">Prof. Joelias</h3>
-                        <p class="text-sm text-gray-600 mb-3">Especialista em [Área de Especialização]</p>
-                        <p class="text-sm text-gray-500"><a href="mailto:?subject=Trilha Brasil Inovador - Contato">Enviar e-mail</a></p>
+                        <h3 class="text-xl font-bold text-primary mb-1">Prof. Dr. Joelias Silva Pinto Junior</h3>
+                        <p class="text-sm text-gray-600 mb-3">Instituto Federal ...</p>
+                        <p class="text-sm text-gray-500"><a href="mailto:">Enviar e-mail</a></p>
                     </div>
                     <!-- Prof. Rodrigo -->
                     <div class="flex flex-col items-center text-center p-6 bg-muted rounded-lg shadow-md">
@@ -499,10 +521,11 @@
                         <div
                             class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center text-gray-500 font-bold">
                             Foto</div>
-                        <h3 class="text-xl font-bold text-primary mb-1">Prof. Rodrigo</h3>
-                        <p class="text-sm text-gray-600 mb-3">Especialista em [Área de Especialização]</p>
-                        <p class="text-sm text-gray-500"><a href="mailto:?subject=Trilha Brasil Inovador - Contato">Enviar e-mail</a></p>
+                        <h3 class="text-xl font-bold text-primary mb-1">Prof. Dr. Rodrigo Sales</h3>
+                        <p class="text-sm text-gray-600 mb-3">Instituto Federal ...</p>
+                        <p class="text-sm text-gray-500"><a href="mailto:">Enviar e-mail</a></p>
                     </div>
+
                 </div>
             </div>
         </section>
